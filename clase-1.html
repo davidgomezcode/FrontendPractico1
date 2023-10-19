@@ -34,6 +34,9 @@
             grid-template-rows: auto 1fr auto;
             width: 300px;
         }
+        .nav{
+            display: none;
+        }
         .logo{
             width: 200px;
             margin-bottom: 40px;
@@ -90,10 +93,80 @@
                 display: block;
             }
         }
+        @media (min-width: 641px){
+            .nav{
+                display: grid;
+                grid-template-columns: 60% 24% 9% 7%;
+                border: 1px solid gray;
+                border-radius: 8px;
+                color: var(--White);
+                height: 50px;
+                align-content: center;
+                
+            }
+            .primerDiv{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto;
+            }
+            img.logoNav{
+                height: 29px;
+                margin-left: 30px;
+                margin-top: 12px;
+            }
+            .button-all{
+                width: 35px;
+                color: var(--Hospital-green);
+                border: 1px solid var(--Hospital-green);
+                background-color: var(--White);
+            }
+            .button-Others{
+                width: 40px;
+                color: grey;
+                border: none;
+                background-color: var(--White);
+            }
+            .button-Toys{
+                width: 20px;
+                color: grey;
+                border: none;
+                background-color: var(--White);
+            }
+            .button-signIn{
+                width: 55px;
+                color: var(--Hospital-green);
+                border: none;
+                background-color: var(--White);
+            }
+            .shooping_car{
+                width: 20px;
+                border: none;
+                background-color: var(--White);
+                margin-top: 10px;
+            }
+        }      
 
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <div class="primerDiv">            
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logoNav">
+            <button class="button-all">All</button>
+
+            <button class="button-Others">Clothes</button>
+            <button class="button-Others">Electronics</button>
+            <button class="button-Others">Furniture</button>
+            <button class="button-Toys">Toys</button>
+            <button class="button-Others">Others</button>
+        </div>
+
+        <div class="empty"></div>
+        
+        <button class="button-signIn">Sign in</button>
+        <img src="./icons/icon_shopping_cart.svg" alt="shooping car" class="shooping_car">
+
+    </nav>
+    
     <div class="login">
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
