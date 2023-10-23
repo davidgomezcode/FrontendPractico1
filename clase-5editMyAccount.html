@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand :wght@300;500;700&display=swap" rel="stylesheet">
+    <title>My Account</title>
+    <style>
+        :root{
+            --White: #FFFFFF;
+            --Black:#000000; 
+            --very-light-pink: #C7C7C7;
+            --Text-input-field: #F7F7F7;
+            --Hospital-green: #ACD9B2;
+            --sm:14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .navDesktop{
+            display: none;
+        }
+        .navMobile{
+            display: none;
+        }
+
+        .logo{
+            width: 200px;
+            margin-bottom: 40px;
+            justify-self: center;
+            display: none;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 36px;
+            
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+
+        .value{
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin: 8px 0 32px 0;
+        }
+        .input{
+            background-color: var(--Text-input-field);
+            border: none;
+            border-radius: 8px; 
+            height: 32px;
+            font-size: var(--md);
+            padding: 8px;
+            margin-bottom: 22px;
+        }
+
+
+        .secondary-button {
+            background-color: var(--White);
+            border-radius: 8px;
+            border: 1px solid var(--Hospital-green);
+            color: var(--Hospital-green);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            margin-top: 100px;
+        }
+        @media (max-width: 640px){
+            .navMobile{
+                display: grid;
+                grid-template-columns: 20% 60% 20%;
+                border: 1px solid rgb(233, 228, 228);
+                border-radius: 8px;
+                color: var(--White);
+                height: 50px;
+                align-content: center;                
+            }
+            .menu{
+                display: grid;
+                margin-left: 30px;
+            }
+            .logoNav{
+                display: block;
+                margin-left: 50px;
+            }
+            .shooping_car{
+                margin-left: 30px;
+            }
+            
+        }
+        @media (min-width: 641px){
+            
+
+            .navDesktop{
+                display: grid;
+                grid-template-columns: 60% 24% 9% 7%;
+                border: 1px solid gray;
+                border-radius: 8px;
+                color: var(--White);
+                height: 50px;
+                align-content: center;                
+            }
+            .primerDiv{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto;
+            }
+            .logoNav{
+                height: 29px;
+                margin-left: 30px;
+                margin-top: 12px;
+            }
+            .button-all{
+                width: 35px;
+                color: var(--Hospital-green);
+                border: 1px solid var(--Hospital-green);
+                background-color: var(--White);
+            }
+            .button-Others{
+                width: 40px;
+                color: grey;
+                border: none;
+                background-color: var(--White);
+            }
+            .button-Toys{
+                width: 20px;
+                color: grey;
+                border: none;
+                background-color: var(--White);
+            }
+            .button-signIn{
+                width: 55px;
+                color: var(--Hospital-green);
+                border: none;
+                background-color: var(--White);
+            }
+            .shooping_car{
+                width: 20px;
+                border: none;
+                background-color: var(--White);
+                margin-top: 10px;
+            }
+        }      
+
+    </style>
+</head>
+<body>
+    <nav class="navDesktop">
+        <div class="primerDiv">            
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logoNav">
+            <button class="button-all">All</button>
+            <button class="button-Others">Clothes</button>
+            <button class="button-Others">Electronics</button>
+            <button class="button-Others">Furniture</button>
+            <button class="button-Toys">Toys</button>
+            <button class="button-Others">Others</button>
+        </div>
+
+        <div class="empty"></div>
+        
+        <button class="button-signIn">Sign in</button>
+        <img src="./icons/icon_shopping_cart_notification.svg" alt="shooping car" class="shooping_car">
+
+    </nav>
+
+    <nav class="navMobile">
+        <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+
+        <img src="./logos/logo_yard_sale.svg" alt="logo" class="logoNav">
+        
+        <img src="./icons/icon_shopping_cart_notification.svg" alt="shooping car" class="shooping_car">
+    </nav>
+    
+    <div class="login">
+        <div class="form-container">
+            <form action="/" class="form">  
+                <h1 class="title">My account</h1>
+                
+
+                <label for="name" class="label">Name</label>
+                <p class="value">David Gómez</p>
+                
+                <label for="email" class="label">Email adress</label>
+                <p class="value">davidgomezcode@gmail.com</p>
+
+                <label for="password" class="label">Password</label>
+                <p class="value">*********</p>
+
+                <button class="secondary-button create-button">Edit</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
