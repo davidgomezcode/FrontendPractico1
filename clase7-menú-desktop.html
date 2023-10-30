@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --White: #FFFFFF;
+            --Black:#000000; 
+            --very-light-pink: #C7C7C7;
+            --Text-input-field: #F7F7F7;
+            --Hospital-green: #ACD9B2;
+            --sm:14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .principal{
+            display: grid;
+            grid-template-columns: 70% 15% 15%;
+        }
+        .contenedor{
+            display: grid;
+            border: 1px solid var(--Hospital-green);
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="principal">
+
+        <div class="empty"></div>        
+
+        <div class="contenedor">
+            <section>
+                <p>My orders</p>
+                <p>My account</p>
+            </section>
+
+            <section>
+                <p>Sign out</p>
+            </section>
+        </div>
+        
+        <div class="empty"></div>
+
+    </div>    
+
+</body>
+</html>
