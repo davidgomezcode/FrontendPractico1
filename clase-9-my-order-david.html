@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>My order</title>
+    <style>
+        :root {
+        --white: #FFFFFF;
+        --black: #000000;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+        }
+        body {
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+        }
+        .nav{
+            display: none;
+        }
+        section {
+            padding: 60px 230px 0px 230px;
+        }
+        section p {
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        section ul {
+            padding:0px;
+        }
+        section ul li {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0px 10px 0px;
+        }
+        section ul img {
+            height: 111px;
+        }
+        .purshase-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+        .date{
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 16px;
+            margin-bottom: 4px; 
+        }
+        .number-articles{
+            font-size: var(--sm);
+            font-weight: bold;           
+            margin-top: 0px;
+            margin-bottom: 0px; 
+            color: var(--very-light-pink);
+        }
+        .final-price{
+            width: 60px;
+        }
+        
+
+        @media (min-width: 641px){
+            .nav{
+                display: grid;
+                grid-template-columns: 60% 24% 9% 7%;
+                border: 1px solid gray;
+                border-radius: 8px;
+                color: var(--White);
+                height: 50px;
+                align-content: center;
+                
+            }
+            .primerDiv{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto;
+            }
+            img.logoNav{
+                height: 29px;
+                margin-left: 30px;
+                margin-top: 12px;
+            }
+            .button-all{
+                width: 35px;
+                color: var(--Hospital-green);
+                border: 1px solid var(--Hospital-green);
+                background-color: var(--White);
+            }
+            .button-Others{
+                width: 40px;
+                color: grey;
+                border: none;
+                background-color: var(--White);
+            }
+            .button-Toys{
+                width: 20px;
+                color: grey;
+                border: none;
+                background-color: var(--White);
+            }
+            .button-signIn{
+                width: 55px;
+                color: var(--Hospital-green);
+                border: none;
+                background-color: var(--White);
+            }
+            .shooping_car{
+                width: 30px;
+                border: none;
+                background-color: var(--White);
+                margin-top: 10px;
+            }
+        }
+    </style>    
+</head>
+<body>
+    <div>
+        <nav class="nav">
+            <div class="primerDiv">            
+                <img src="./logos/logo_yard_sale.svg" alt="logo" class="logoNav">
+                <button class="button-all">All</button>
+    
+                <button class="button-Others">Clothes</button>
+                <button class="button-Others">Electronics</button>
+                <button class="button-Others">Furniture</button>
+                <button class="button-Toys">Toys</button>
+                <button class="button-Others">Others</button>
+            </div>
+    
+            <div class="empty"></div>
+            
+            <button class="button-signIn">Sign in</button>
+            <img src="./icons/icon_shopping_cart_notification.svg" alt="shooping car" class="shooping_car">
+    
+        </nav>
+
+        <section>
+            <p>My order</p>
+
+            <div class="purshase-info">
+                <div>
+                    <p class="date">date</p>
+                    <p class="number-articles">(n) articles</p>
+                </div>
+                <p class="final-price">$(n)</p>
+            </div>
+
+            <ul>
+                <li>
+                    <img src="https://images.pexels.com/photos/4587998/pexels-photo-4587998.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-image">
+                    <p>Border Collie</p>
+                    <p>$(n)</p>
+                </li> 
+                
+                <li>
+                    <img src="https://images.pexels.com/photos/4587998/pexels-photo-4587998.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-image">
+                    <p>Border Collie</p>
+                    <p>$(n)</p>
+                </li> 
+
+                <li>
+                    <img src="https://images.pexels.com/photos/4587998/pexels-photo-4587998.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-image">
+                    <p>Border Collie</p>
+                    <p>$(n)</p>
+                </li> 
+                
+                <li>
+                    <img src="https://images.pexels.com/photos/4587998/pexels-photo-4587998.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-image">
+                    <p>Border Collie</p>
+                    <p>$(n)</p>
+                </li> 
+            </ul>
+        </section>
+
+    </div>
+</body>
+</html>
